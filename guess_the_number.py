@@ -11,4 +11,7 @@ user_number = int(input())
 if user_number == random_number:
 	print("Yeah! You guessed.")
 else:
-	print("Oh no, next time you will definitely succeed.")
+	if user_number > random_number:
+		print("Oh no, but your number was more than conceived. " + "Next time you will definitely succeed.")
+	else:
+		print("Oh no, but your number was less than conceived. " + "Next time you will definitely succeed.")
