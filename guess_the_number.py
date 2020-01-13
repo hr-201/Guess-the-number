@@ -1,4 +1,4 @@
-## Guess the number v 1.1 
+## Guess the number v 1.1.2
 import random
 
 random_number = random.randrange(0, 50)
