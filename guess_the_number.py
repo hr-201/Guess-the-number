@@ -3,6 +3,8 @@ import random
 
 # Function for start
 def start(user_number):
+
+	
 	if user_number == random_number:
 		print("Yeah! You guessed.")
 	else:
@@ -33,11 +35,8 @@ def restart(restart_or_quit):
 def create_restart():
 	restart_or_quit = input()
 	restart(restart_or_quit)
-
-
 print("Hi! Let's play a game.\n I come up with a number, and you guess that number.\n")
-print("I made a number from 0 to 50.\nPlease enter your number: ")
+print("I made a number from -2 to 50.\nPlease enter your number: ")
 
-random_number = random.randrange(0, 50)
-
+random_number = random.randrange(-2, 50)
 start(int(input()))
