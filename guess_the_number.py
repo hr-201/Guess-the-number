@@ -1,8 +1,6 @@
 ## Guess the number v 1.1.2
 import random
 
-random_number = random.randrange(0, 50)
-
 # Function for start
 def start(user_number):
 	if user_number == random_number:
@@ -39,5 +37,7 @@ def create_restart():
 
 print("Hi! Let's play a game.\n I come up with a number, and you guess that number.\n")
 print("I made a number from 0 to 50.\nPlease enter your number: ")
+
+random_number = random.randrange(0, 50)
 
 start(int(input()))
