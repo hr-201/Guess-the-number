@@ -1,42 +1,13 @@
 ## Guess the number v 1.1.2
 import random
 
-# Function for start
-def start(user_number):
+import start as s
+import restart as rs 
+import create_restart as crs
 
-	
-	if user_number == random_number:
-		print("Yeah! You guessed.")
-	else:
-		if user_number > random_number:
-			print("Oh no, but your number was more than conceived. " + "Next time you will definitely succeed.\n")
-
-			print("For restart enter 'r', but if you want to exit enter 'q'")
-			create_restart()
-		else:
-			print("Oh no, but your number was less than conceived. " + "Next time you will definitely succeed.\n")
-
-			print("For restart enter 'r', but if you want to exit enter 'q'")
-			create_restart()
-			
-# Function for restart
-def restart(restart_or_quit):
-	if restart_or_quit == 'r':
-		print("I made a new number from 0 to 50.\nPlease enter your number: ")
-		start(int(input()))
-	elif restart_or_quit == 'q':
-		exit()
-	else:
-		print("Command not recognized, enter it again.")
-
-		create_restart()
-
-# Function for created restar in functions
-def create_restart():
-	restart_or_quit = input()
-	restart(restart_or_quit)
 print("Hi! Let's play a game.\n I come up with a number, and you guess that number.\n")
 print("I made a number from -2 to 50.\nPlease enter your number: ")
 
-random_number = random.randrange(-2, 50)
-start(int(input()))
+random_number = random.randrange(0, 50)
+
+s.start(int(input()), random_number, crs, rs, s)
